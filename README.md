@@ -12,6 +12,11 @@
   - [Troubleshooting](#troubleshooting)
     - [Missing libArduPilotPlugin](#missing-libardupilotplugin)
 
+## Improvements
+[x] The camera plugin configuration for Gazebo was added to the SDF file
+
+[x] The gimbal was attached to the fixed-wing aircraft
+
 ## Requirements :
 Native Ubuntu Xenial(16.04 LTS) able to run full 3D graphics.
 

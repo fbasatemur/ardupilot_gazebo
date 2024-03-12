@@ -61,35 +61,6 @@
             </script>
           </material>
       </visual>
-      <sensor name="camera" type="multicamera">
-        <always_on>1</always_on>
-        <update_rate>30</update_rate>
-        <visualize>true</visualize>
-        <camera name="left">
-          <pose>0 0 0 0 0 0</pose>
-          <horizontal_fov>1.91986</horizontal_fov>
-          <image>
-            <width>720</width>
-            <height>480</height>
-          </image>
-          <clip>
-            <near>0.1</near>
-            <far>100</far>
-          </clip>
-        </camera>
-        <camera name="right">
-          <pose>0 -0.12 0 0 0 0</pose>
-          <horizontal_fov>1.91986</horizontal_fov>
-          <image>
-            <width>720</width>
-            <height>480</height>
-          </image>
-          <clip>
-            <near>0.1</near>
-            <far>100</far>
-          </clip>
-        </camera>
-      </sensor>
     </link>
   </model>
 </sdf>

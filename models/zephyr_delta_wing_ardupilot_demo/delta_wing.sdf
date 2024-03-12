@@ -12,10 +12,16 @@
       -->
       <pose>0 0 0.2 0 0 0</pose>
     </include>
+
     <include>
       <uri>model://ZED_stereocamera</uri>
       <pose>0 -0.34 0.28 0 0 4.7123889803</pose>
     </include>
+    <!-- <include>
+      <uri>model://gimbal_small_2d</uri>
+      <pose>0 -0.01 0.070 1.57 0 1.57</pose>
+    </include> -->
+
     <link name="cam_link">
       <pose>0 0 0 0 0 0 </pose>
       <inertial>
@@ -45,7 +51,10 @@
       </sensor>
     </link>
     <joint name="camera_mount" type="fixed">
+
       <child>ZED_stereocamera::link</child>
+      <!-- <child>gimbal_small_2d::base_link</child> -->
+
       <parent>zephyr_delta_wing::wing</parent>
       <axis>
         <xyz>0 0 1</xyz>
@@ -53,6 +62,7 @@
           <upper>0</upper>
           <lower>0</lower>
         </limit>
+
       </axis>
     </joint>
     <joint name="virtual_camera_mount" type="fixed">
@@ -117,6 +127,8 @@
         </surface>
       </collision>
     </link>
+
+    
     <joint name="skid_pad_joint" type="fixed">
       <parent>zephyr_delta_wing::wing</parent>
       <child>skid_pad</child>
@@ -146,7 +158,7 @@
             multiplier = 838 max rpm / 1 = 838
         -->
         <multiplier>838</multiplier>
-        <offset>0.2</offset>
+        <offset>0.1</offset>
         <type>VELOCITY</type>
         <p_gain>0.5</p_gain>
         <i_gain>0</i_gain>
